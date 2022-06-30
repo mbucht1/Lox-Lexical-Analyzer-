@@ -1,4 +1,3 @@
-#include "hello.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -25,13 +24,13 @@ void runFile(char *arg){
     Token *tokens = scan(scanner);
 
     
-    // for(int i = 0; i < scanner->pointer; i++){
-    //     printf("Type: %s\n", toString(scanner->tokens[i].type));
-    //     printf("lexeme: %s\n", scanner->tokens[i].lexeme);
-    //     printf("literal: %s\n", scanner->tokens[i].literal);
-    //     printf("Line: %d\n", scanner->tokens[i].line);
-    //     printf("\n");
-    // }
+    for(int i = 0; i < scanner->pointer; i++){
+        printf("Type: %s\n", toString(scanner->tokens[i].type));
+        printf("lexeme: %s\n", scanner->tokens[i].lexeme);
+        printf("literal: %s\n", scanner->tokens[i].literal);
+        printf("Line: %d\n", scanner->tokens[i].line);
+        printf("\n");
+    }
 }
 
 void runPrompt(){
